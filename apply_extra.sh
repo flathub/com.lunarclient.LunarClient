@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash
 
 APP_IMAGE="/app/extra/lunar-client.appimage"
 
