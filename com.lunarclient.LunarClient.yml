@@ -26,6 +26,12 @@ modules:
         url: https://github.com/refi64/unappimage
         commit: d7f86f2a0d7ec3a69211125207d5f127386b849a
 
+  - name: xrandr
+    sources:
+      - sha256: 7b99edb7970a1365eaf5bcaf552144e4dfc3ccf510c4abc08569849929fb366e
+        type: archive
+        url: https://www.x.org/archive/individual/app/xrandr-1.5.1.tar.gz
+
   - name: lunarclient
     buildsystem: simple
     cleanup:
@@ -62,9 +68,3 @@ modules:
       - install -Dm644 com.lunarclient.LunarClient.desktop "${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop"
       - install -Dm644 com.lunarclient.LunarClient.appdata.xml "${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.appdata.xml"
       - install  -Dm644 -t ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps lunarclient.png
-
-  - name: xrandr
-    sources:
-      - sha256: 7b99edb7970a1365eaf5bcaf552144e4dfc3ccf510c4abc08569849929fb366e
-        type: archive
-        url: https://www.x.org/archive/individual/app/xrandr-1.5.1.tar.gz
