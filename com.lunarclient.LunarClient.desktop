@@ -5,4 +5,5 @@ Exec=lunarclient
 Terminal=false
 Type=Application
 Icon=com.lunarclient.LunarClient
+StartupWMClass=lunarclient
 Categories=Game;
