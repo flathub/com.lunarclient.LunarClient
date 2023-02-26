@@ -33,3 +33,4 @@ done
 
 # Clean up
 rm -rf squashfs-root/
+rm $APP_IMAGE
