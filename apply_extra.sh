@@ -28,7 +28,7 @@ iconSizes=("16" "32" "48" "64" "128" "256")
 for I in "${iconSizes[@]}"
 do
 	dir="$ICON_DIR/${I}x${I}/apps/"
-	mv "$dir/lunarclient.png" "$dir/com.lunarclient.LunarClient.png"
+	mv "$dir/launcher.png" "$dir/com.lunarclient.LunarClient.png"
 done
 
 # Clean up
