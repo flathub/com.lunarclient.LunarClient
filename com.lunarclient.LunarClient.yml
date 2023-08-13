@@ -16,6 +16,7 @@ finish-args:
   - --socket=wayland
   - --socket=pulseaudio
   - --persist=.java
+  - --talk-name=org.kde.StatusNotifierWatcher
 modules:
   - name: unappimage
     buildsystem: simple
