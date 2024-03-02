@@ -327,6 +327,11 @@
 		</screenshot>
 		<screenshot>
 			<image>
+				https://raw.githubusercontent.com/Doomsdayrs/flathub/com.lunarclient.LunarClient/screenshots/versions.png
+			</image>
+		</screenshot>
+		<screenshot>
+			<image>
 				https://raw.githubusercontent.com/Doomsdayrs/flathub/com.lunarclient.LunarClient/screenshots/servers.png
 			</image>
 		</screenshot>
@@ -335,7 +340,7 @@
 				https://raw.githubusercontent.com/Doomsdayrs/flathub/com.lunarclient.LunarClient/screenshots/settings.png
 			</image>
 		</screenshot>
-			<screenshot>
+		<screenshot>
 			<image>
 				https://raw.githubusercontent.com/Doomsdayrs/flathub/com.lunarclient.LunarClient/screenshots/game.png
 			</image>
