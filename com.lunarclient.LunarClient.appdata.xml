@@ -26,6 +26,9 @@
 	<launchable type="desktop-id">com.lunarclient.LunarClient.desktop</launchable>
 
 	<releases>
+		<release version="3.2.8" date="2024-05-20">
+			<description></description>
+		</release>
 		<release version="3.2.7" date="2024-05-10"/>
 		<release version="3.2.6" date="2024-04-29"/>
 		<release version="3.2.5" date="2024-04-19"/>
