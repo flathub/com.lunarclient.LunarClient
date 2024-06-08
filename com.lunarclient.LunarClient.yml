@@ -39,9 +39,9 @@ modules:
       - squashfs-root
     sources:
       - type: extra-data
-        url: https://launcherupdates.lunarclientcdn.com/Lunar%20Client-3.2.9.AppImage
-        size: 117005233
-        sha256: 8448d21d6e279046d48239efdbb618942eea44eac0ae690153aa29316ca1c8b2
+        url: https://launcherupdates.lunarclientcdn.com/Lunar%20Client-3.2.10.AppImage
+        size: 117021591
+        sha256: aa4de79ce580a66142d5928a98b1880b4e7a1ec7b29b4b5a545dc38ba9f9941c
         filename: lunar-client.appimage
         x-checker-data:
           type: electron-updater
