@@ -11,9 +11,9 @@ finish-args:
   - --persist=.minecraft
   - --persist=.lunarclient
   - --share=network
+  - --share=ipc
   - --device=dri
   - --socket=x11
-  - --socket=wayland
   - --socket=pulseaudio
   - --persist=.java
   - --talk-name=org.kde.StatusNotifierWatcher
