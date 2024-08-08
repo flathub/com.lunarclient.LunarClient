@@ -11,6 +11,7 @@ finish-args:
   - --persist=.minecraft
   - --persist=.lunarclient
   - --share=network
+  - --share=ipc
   - --device=dri
   - --socket=x11
   - --socket=wayland
@@ -49,7 +50,7 @@ modules:
       - type: script
         dest-filename: lunarclient
         commands:
-          - exec zypak-wrapper /app/extra/bin/launcher --no-sandbox "$0"
+          - exec zypak-wrapper /app/extra/bin/lunarclient --no-sandbox "$0"
 
       - type: file
         path: com.lunarclient.LunarClient.appdata.xml
