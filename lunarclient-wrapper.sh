@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Flatpak Discord RPC support
 
 for i in {0..9}; do
