@@ -63,11 +63,11 @@ modules:
         path: apply_extra.sh
 
       - type: file
-        path: icons/lunarclient.png
+        path: icons/lunarclient.svg
 
     build-commands:
       - install -D ./apply_extra.sh "${FLATPAK_DEST}/bin/apply_extra"
       - install lunarclient "${FLATPAK_DEST}/bin/"
       - install -Dm644 com.lunarclient.LunarClient.desktop "${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop"
       - install -Dm644 com.lunarclient.LunarClient.appdata.xml "${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.appdata.xml"
-      - install  -Dm644 -t ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps lunarclient.png
+      - install  -Dm644 -t ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps lunarclient.svg
