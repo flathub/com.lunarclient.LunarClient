@@ -1,12 +1,11 @@
 app-id: com.lunarclient.LunarClient
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: "23.08"
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
-base-version: '23.08'
+base-version: "23.08"
 command: lunarclient
 separate-locales: false
-rename-icon: lunarclient
 finish-args:
   - --persist=.minecraft
   - --persist=.lunarclient
@@ -19,15 +18,6 @@ finish-args:
   - --persist=.java
   - --talk-name=org.kde.StatusNotifierWatcher
 modules:
-  - name: unappimage
-    buildsystem: simple
-    build-commands:
-      - make -C squashfs-tools install INSTALL_DIR=/app/bin
-    sources:
-      - type: git
-        url: https://github.com/refi64/unappimage
-        commit: d7f86f2a0d7ec3a69211125207d5f127386b849a
-
   - name: xrandr
     sources:
       - sha256: 7b99edb7970a1365eaf5bcaf552144e4dfc3ccf510c4abc08569849929fb366e
@@ -36,14 +26,11 @@ modules:
 
   - name: lunarclient
     buildsystem: simple
-    cleanup:
-      - squashfs-root
     sources:
-      - type: extra-data
+      - type: file
         url: https://launcherupdates.lunarclientcdn.com/Lunar%20Client-3.5.4-ow.AppImage
-        size: 137631891
         sha256: 4ef34a35f74cc0e5ddf363c06d20a7b3cc755606bed16105f52c884f12fc511d
-        filename: lunar-client.appimage
+        dest-filename: lunar-client.appimage
         x-checker-data:
           type: rotating-url
           url: https://api.lunarclientprod.com/site/download?os=linux
@@ -51,7 +38,7 @@ modules:
       - type: script
         dest-filename: lunarclient
         commands:
-          - exec zypak-wrapper /app/extra/bin/lunarclient --no-sandbox "$0"
+          - exec zypak-wrapper /app/lunarclient/lunarclient --no-sandbox "$0"
 
       - type: file
         path: com.lunarclient.LunarClient.appdata.xml
@@ -60,14 +47,17 @@ modules:
         path: com.lunarclient.LunarClient.desktop
 
       - type: file
-        path: apply_extra.sh
-
-      - type: file
         path: icons/lunarclient.png
 
     build-commands:
-      - install -D ./apply_extra.sh "${FLATPAK_DEST}/bin/apply_extra"
+      # Extract AppImage
+      - chmod +x ./lunar-client.appimage
+      - ./lunar-client.appimage --appimage-extract
+      - mv squashfs-root "${FLATPAK_DEST}/lunarclient"
+
+      # Install launch script
       - install lunarclient "${FLATPAK_DEST}/bin/"
+
       - install -Dm644 com.lunarclient.LunarClient.desktop "${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop"
       - install -Dm644 com.lunarclient.LunarClient.appdata.xml "${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.appdata.xml"
-      - install  -Dm644 -t ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps lunarclient.png
+      - install -Dm644 lunarclient.png "${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png"
