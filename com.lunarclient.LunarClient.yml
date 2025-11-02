@@ -34,6 +34,7 @@ modules:
         x-checker-data:
           type: rotating-url
           url: https://api.lunarclientprod.com/site/download?os=linux
+          pattern: https://launcherupdates.lunarclientcdn.com/Lunar%20Client-([0-9.]+)-ow.AppImage
 
       - type: script
         dest-filename: lunarclient
