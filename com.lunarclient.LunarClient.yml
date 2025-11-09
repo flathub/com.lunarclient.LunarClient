@@ -8,6 +8,7 @@ command: lunarclient
 separate-locales: false
 rename-icon: lunarclient
 finish-args:
+  - --filesystem=xdg-run/app/com.discordapp.Discord:create # allows flatpak discord rpc
   - --persist=.minecraft
   - --persist=.lunarclient
   - --share=network
@@ -71,3 +72,13 @@ modules:
       - install -Dm644 com.lunarclient.LunarClient.desktop "${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop"
       - install -Dm644 com.lunarclient.LunarClient.appdata.xml "${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.appdata.xml"
       - install  -Dm644 -t ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps lunarclient.png
+
+    # replaces ${FLATPAK_DEST}/bin/lunarclient with wrapper script
+  - name: lunarclient-wrapper
+    buildsystem: simple
+    build-commands:
+      - mv "${FLATPAK_DEST}/bin/lunarclient" "${FLATPAK_DEST}/bin/lunarclient-wrapped"
+      - install -Dm755 lunarclient-wrapper.sh "${FLATPAK_DEST}/bin/lunarclient"
+    sources:
+      - type: file
+        path: lunarclient-wrapper.sh
