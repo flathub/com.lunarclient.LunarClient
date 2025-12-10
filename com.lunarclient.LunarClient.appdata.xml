@@ -26,8 +26,11 @@
 	<launchable type="desktop-id">com.lunarclient.LunarClient.desktop</launchable>
 
 	<releases>
-		<release version="3.5.11" date="2025-11-30">
+		<release version="3.5.12" date="2025-12-10">
 			<description></description>
+		</release>
+		<release version="3.5.11" date="2025-11-30">
+			<description/>
 		</release>
 		<release version="3.5.10" date="2025-11-29">
 			<description/>
