@@ -565,23 +565,33 @@
 
 	<screenshots>
 		<screenshot type="default">
+			<caption>Launcher main menu</caption>
 			<image>
-				https://raw.githubusercontent.com/Doomsdayrs/flathub/com.lunarclient.LunarClient/screenshots/home.png
+				https://raw.githubusercontent.com/flathub/com.lunarclient.LunarClient/master/screenshots/launcher.png
 			</image>
 		</screenshot>
 		<screenshot>
+			<caption>Install modpacks from Modrinth and CurseForge</caption>
 			<image>
-				https://raw.githubusercontent.com/Doomsdayrs/flathub/com.lunarclient.LunarClient/screenshots/servers.png
+				https://raw.githubusercontent.com/flathub/com.lunarclient.LunarClient/master/screenshots/modpacks.png
 			</image>
 		</screenshot>
 		<screenshot>
+			<caption>Change memory allocation, game directory, and more</caption>
 			<image>
-				https://raw.githubusercontent.com/Doomsdayrs/flathub/com.lunarclient.LunarClient/screenshots/settings.png
+				https://raw.githubusercontent.com/flathub/com.lunarclient.LunarClient/master/screenshots/settings.png
 			</image>
 		</screenshot>
-			<screenshot>
+		<screenshot>
+			<caption>Lunar Client main menu</caption>
 			<image>
-				https://raw.githubusercontent.com/Doomsdayrs/flathub/com.lunarclient.LunarClient/screenshots/game.png
+				https://raw.githubusercontent.com/flathub/com.lunarclient.LunarClient/master/screenshots/lunar-menu.png
+			</image>
+		</screenshot>
+		<screenshot>
+			<caption>Overlay main menu</caption>
+			<image>
+				https://raw.githubusercontent.com/flathub/com.lunarclient.LunarClient/master/screenshots/ingame-menu.png
 			</image>
 		</screenshot>
 	</screenshots>
