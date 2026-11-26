@@ -28,8 +28,8 @@ modules:
     buildsystem: simple
     sources:
       - type: file
-        url: https://launcher-releases.lunarclientprod.com/master/6e18b5a4f4ebbd4c7ecff572f1700cedce1f248bcb157adce5ec49be9e081a23/Lunar%20Client-3.8.1-ow.AppImage
-        sha256: e1283fd7e76c9ebc4e380ab6fb5b07ea786c06cd9a8d58d572a8c58491b01dea
+        url: https://launcher-releases.lunarclientprod.com/master/6e18b5a4f4ebbd4c7ecff572f1700cedce1f248bcb157adce5ec49be9e081a23/Lunar%20Client-3.8.2-ow.AppImage
+        sha256: c771a1763b9004b942032333a6151b16def58785c98406e1756565836280552e
         dest-filename: lunar-client.appimage
         x-checker-data:
           type: rotating-url
